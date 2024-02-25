@@ -13,6 +13,7 @@ end)
 --- @return nil
 function Config.DoorlockAction(doorId, setLocked)
     TriggerServerEvent('qb-doorlock:server:updateState', doorId, setLocked, false, false, true, false, false)
+    TriggerEvent('wais:addmissionxp:hackbank', 1) --added by pamela for wais battlepass
 end
 
 --- This will be triggered once an action happens that can drop evidence
@@ -28,6 +29,7 @@ end
 --- @return nil
 function Config.OnDrillingAction()
     TriggerServerEvent('hud:server:GainStress', math.random(4, 8))
+    TriggerEvent('wais:addmissionxp:hackstress', 1) --added by pamela for wais battlepass
 end
 
 --- This is triggered whenever a robbery call is made by the alarm of a bank
